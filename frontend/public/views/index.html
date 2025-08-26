@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/frontend/public/css/main.css">
 
-    <script src="/frontend/public/js/componets/navbar.js" defer></script>
-    <script src="/frontend/public/js/componets/hero.js" defer></script>
+    <script src="/frontend/public/js/components/navbar.js" defer></script>
+    <script src="/frontend/public/js/components/hero.js" defer></script>
+    <!-- <script src="/frontend/public/js/componets/card.js" defer></script> -->
+     <!-- script para cargar todas las cards -->
+    <script type="module">
+        import {loadCards} from"/frontend/public/js/components/card.js";
+        loadCards(".cards-container"); //clase para cargar todas las cards
+    </script>
     
 </head>
 
@@ -16,9 +22,12 @@
         <div class="navbar-container"></div>
     </header>
 
-    <section class="hero"></section>
+    <section class="hero">
+        <div class="hero-container"></div>
+    </section>
 
-    
+    <div class="cards-container"></div>
+     
     <h1>Estoy en inicio</h1>
 
     
